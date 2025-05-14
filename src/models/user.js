@@ -33,7 +33,7 @@ const userSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    tipo_usuario: { // administrador - cliente
+    rol: { // administrador - cliente
         type: String,
         required: true
     }

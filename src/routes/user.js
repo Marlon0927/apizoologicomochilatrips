@@ -31,19 +31,19 @@ router.get("/user/:id", (req, res) => {
 //Modificar el nombre de un usuario por su id
 router.put("/user/:id", (req, res) => {
     const { id } = req.params;
-    const { nombre, apellido, tipo_doc, num_doc, codigo, correo, edad, carrera, semestre, jornada } = req.body;
-    estudianteSchema
+    const { usuario, correo, clave, nombre, telefono, direccion, ciudad, preferencias_de_viaje, rol } = req.body;
+    userSchema
         .updateOne({ _id: id }, {
-            $set: { nombre, apellido, tipo_doc, num_doc, codigo, correo, edad, carrera, semestre, jornada }
+            $set: { usuario, correo, clave, nombre, telefono, direccion, ciudad, preferencias_de_viaje, rol }
         })
         .then((data) => res.json(data))
         .catch((error) => res.json({ message: error }));
 });
 
 //Eliminar un estudiante por su id
-router.delete("/estudiantes/:id", (req, res) => {
+router.delete("/user/:id", (req, res) => {
     const { id } = req.params;
-    estudianteSchema
+    userSchema
         .findByIdAndDelete(id)
         .then((data) => {
             res.json(data);
