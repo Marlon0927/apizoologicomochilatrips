@@ -1,5 +1,5 @@
 const mongoose = require("mongoose"); // importando el componente mogoose
-const estudianteSchema = mongoose.Schema({
+const destinosSchema = mongoose.Schema({
 
     pais: {
         type: String,
@@ -46,4 +46,4 @@ const estudianteSchema = mongoose.Schema({
         required: false,
     }
 });
-module.exports = mongoose.model("Destino",destinosSchema);
+module.exports = mongoose.model("Destino", destinosSchema);
