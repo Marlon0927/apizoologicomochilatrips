@@ -10,11 +10,15 @@ const reservaSchema = mongoose.Schema({
     },
     fecha_inicio: {
         type: String,
-        required: true
+        required: false
     },
     fecha_fin: {
         type: String,
-        required: true
+        required: false
+    },
+    cant_personas: {
+        type: String,
+        required: false
     }
 });
 
