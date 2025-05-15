@@ -1,5 +1,5 @@
 const mongoose = require("mongoose"); // importando el componente mogoose
-const estudianteSchema = mongoose.Schema({
+const destinosSchema = mongoose.Schema({
     pais: {
         type: String,
         required: true,
@@ -10,15 +10,15 @@ const estudianteSchema = mongoose.Schema({
     },
     fecha_inicio: {
         type: Date,
-        required: true,
+        required: false,
     },
     fecha_final: {
         type: Date,
-        required: true,
+        required: false,
     },
     precio: {
-        type: int,
-        required: true,
+        type: String,
+        required: false,
     },
     descripcion: {
         type: String,
@@ -45,4 +45,4 @@ const estudianteSchema = mongoose.Schema({
         required: false,
     }
 });
-module.exports = mongoose.model("Destino", destinoSchema);
+module.exports = mongoose.model("Destino", destinosSchema);
