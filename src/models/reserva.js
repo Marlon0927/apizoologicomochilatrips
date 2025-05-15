@@ -1,18 +1,10 @@
 const mongoose = require("mongoose"); // importando el componente mongoose
 const reservaSchema = mongoose.Schema({
-    usuario: {
-        type: String,
-        required: true
-    },
-    nombre_usuario: {
+    tipo_reserva: {
         type: String,
         required: true
     },
     destino: {
-        type: String,
-        required: true
-    },
-    precio: {
         type: String,
         required: true
     },
