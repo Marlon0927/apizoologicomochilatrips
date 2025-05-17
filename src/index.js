@@ -6,6 +6,7 @@ const userRoutes = require("./routes/user");
 const destinosRoutes = require("./routes/destinos");
 const reservaRoutes = require("./routes/reserva");
 //const authRoutes = require("./routes/authentication");
+//agregar en const la rewserva con su redirect
 
 const mongoose = require("mongoose");
 require('dotenv').config();
