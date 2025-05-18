@@ -24,7 +24,7 @@ router.get("/reserva", async (req, res) => {
     }
 });
 
-//Consultar un usuario por su id
+//Consultar reserva por su id
 router.get("/reserva/:id", (req, res) => {
     const { id } = req.params;
     reservaSchema
