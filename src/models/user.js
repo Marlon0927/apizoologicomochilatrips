@@ -23,7 +23,7 @@ const userSchema = mongoose.Schema({
     },
     direccion: {
         type: String,
-        required: true
+        required: false
     },
     ciudad: {
         type: String,
@@ -31,11 +31,11 @@ const userSchema = mongoose.Schema({
     },
     preferencias_de_viaje: {
         type: String,
-        required: true
+        required: false
     },
     rol: { // administrador - cliente
         type: String,
-        required: true
+        required: false
     }
 });
 userSchema.methods.encryptClave = async (clave) => {
