@@ -23,7 +23,7 @@ const destinosSchema = mongoose.Schema({
     },
     descripcion: {
         type: String,
-        required: true,
+        required: false,
     },
     duracion: {
         type: String,
