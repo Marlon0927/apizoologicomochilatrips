@@ -11,11 +11,11 @@ const destinosSchema = mongoose.Schema({
     },
     fecha_inicio: {
         type: Date,
-        required: true,
+        required: false,
     },
     fecha_final: {
         type: Date,
-        required: true,
+        required: false,
     },
     precio: {
         type: String,
