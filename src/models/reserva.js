@@ -18,7 +18,7 @@ const reservaSchema = mongoose.Schema({
     },
     cant_personas: {
         type: String,
-        required: false
+        required: true
     }
 });
 
