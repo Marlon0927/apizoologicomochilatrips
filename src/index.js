@@ -18,7 +18,7 @@ app.use(parser.json()); // transforma los datos a formato JSON
 app.use("/api", userRoutes);
 app.use("/api", destinosRoutes);
 app.use("/api", reservaRoutes);
-//app.use("/api", authRoutes);
+app.use("/api", authRoutes);
 app.use(express.json());
 
 //Conexión a la base de datos

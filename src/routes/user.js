@@ -2,10 +2,12 @@
 const express = require("express");
 const router = express.Router(); //manejador de rutas de express
 const userSchema = require("../models/user");
+const bcrypt = require("bcrypt");
 
 //Nuevo usuario
-router.post("/user", (req, res) => {
+router.post("/user", async (req, res) => {
     const user = userSchema(req.body);
+    user.clave = await user.encryptClave(user.clave);
     user
         .save()
         .then((data) => res.json(data))

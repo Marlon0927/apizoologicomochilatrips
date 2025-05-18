@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const Reserva = require("../models/reserva");
 
-// Crear una nueva reserva 
+// Crear una nueva reserva
 router.post("/reserva", async (req, res) => {
     try {
         const nuevaReserva = new Reserva(req.body);
