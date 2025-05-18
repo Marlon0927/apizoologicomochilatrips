@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const Reserva = require("../models/reserva");
+const reservaSchema = require("../models/reserva");
 
 // Crear una nueva reserva
 router.post("/reserva", async (req, res) => {
@@ -21,6 +22,15 @@ router.get("/reserva", async (req, res) => {
     } catch (error) {
         res.status(500).json({ mensaje: "Error al obtener las reservas", error });
     }
+});
+
+//Consultar un usuario por su id
+router.get("/reserva/:id", (req, res) => {
+    const { id } = req.params;
+    reservaSchema
+        .findById(id)
+        .then((data) => res.json(data))
+        .catch((error) => res.json({ message: error }));
 });
 
 // Actualizar una reserva por ID

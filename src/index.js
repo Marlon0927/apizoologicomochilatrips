@@ -5,7 +5,7 @@ const port = 3001;
 const userRoutes = require("./routes/user");
 const destinosRoutes = require("./routes/destinos");
 const reservaRoutes = require("./routes/reserva");
-//const authRoutes = require("./routes/authentication");
+const authRoutes = require("./routes/authentication");
 //agregar en const la rewserva con su redirect
 //solucionado el error de redirect con el servidor 
 
