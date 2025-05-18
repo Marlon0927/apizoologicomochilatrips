@@ -42,7 +42,7 @@ router.put("/user/:id", (req, res) => {
         .catch((error) => res.json({ message: error }));
 });
 
-//Eliminar un estudiante por su id
+//Eliminar un usuario por su id
 router.delete("/user/:id", (req, res) => {
     const { id } = req.params;
     userSchema
