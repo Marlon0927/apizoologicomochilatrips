@@ -9,6 +9,24 @@ const authRoutes = require("./routes/authentication");
 //agregar en const la rewserva con su redirect
 //solucionado el error de redirect con el servidor 
 
+
+// cors 
+
+const cors = require('cors');
+
+app.use(cors({
+    origin: 'http://localhost:4200',  // permite solo Angular en localhost:4200
+    //methods: ['GET', 'POST', 'PUT', 'DELETE'],  // Métodos permitidos
+   // credentials: true  // si usas cookies o autenticación
+}));
+
+// o para permitir cualquier origen (menos seguro, solo para desarrollo)
+app.use(cors());
+
+// Resto de rutas y configuración...
+// cierre cors
+
+
 const mongoose = require("mongoose");
 require('dotenv').config();
 app.use(parser.urlencoded({ extended: false })); //permite leer los datos que vienen en la petición
